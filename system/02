@@ -1,0 +1,10 @@
+#2) Quelle commande permet de renommer votre système ?
+#hostname mydebian
+
+
+#echo "commande avec arg: hostname $1"
+#hostname $1
+
+# la reponse:
+echo "reponse commande : hostname new_hostname"
+#hostname 

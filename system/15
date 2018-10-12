@@ -1,0 +1,5 @@
+#15. Trouvez une commande qui permet de tuer le processus de la commande en background
+#kill %1
+#kill -signal SIGKILL $(jobs -p)
+#/bin/bash -c "kill -9  $(jobs -p)"
+pkill tail

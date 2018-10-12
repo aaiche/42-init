@@ -1,0 +1,5 @@
+#11) Quelle commande permet d’afficher l’espace disponible par le système ?
+df -h --total | egrep total | tr -s " " | cut -d " " -f4
+
+# ou tout simplement 
+# df -h

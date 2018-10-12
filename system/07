@@ -1,0 +1,5 @@
+#7) Déterminez le PID du service SSHD
+ps -aef  | egrep /usr/sbin/sshd | egrep -v grep | tr -s " " | cut -d " " -f2
+
+#mais aussi
+#        root@yourdebian:/home/aa# cat /var/run/sshd.pid

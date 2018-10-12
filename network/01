@@ -1,0 +1,8 @@
+#1) Récupérez la liste des interfaces réseau de la machine sans afficher aucun détail
+#pour ces interfaces. Vraiment juste la liste des noms.
+
+ifconfig -l
+
+#lo0 gif0 stf0 en0 en1 en4 en3 bridge0 p2p0 awdl0 utun0
+
+

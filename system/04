@@ -1,0 +1,5 @@
+#4) Quelle commande donne le temps depuis laquelle votre système est allumé ?
+echo "commande light: uptime -p"
+uptime -p
+echo "commande full: uptime"
+uptime

@@ -1,0 +1,4 @@
+#16) Faites pointer intra.42.fr sur l’adresse suivante 46.19.122.85
+#	add the following entry to /etc/hosts and check nsswitch.conf for precedence
+
+46.19.122.85 	intra.42.fr

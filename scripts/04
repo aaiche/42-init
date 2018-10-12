@@ -1,0 +1,39 @@
+#!/bin/bash
+#set -x
+#apt-get install postfix
+#apt-get install mailutils
+#crontab -e 0 0 * * * script
+#crontab 0 0 * * * /bin/sh /home/aa/04.sh /etc/crontab >/dev/null 2>&1
+
+sumfile=/tmp/md5sumlist
+recipients="root@localhost"
+from="root@localhost"
+subject="monitoring file $1"
+
+if [ -z "$1" -o ! -f "$1" ]; then
+  #echo "I need a file."
+  logger monitoring file : I need a file.
+  exit 1
+elif ! egrep -qs "($1)" $sumfile; then
+  #echo "ERROR: Unknown file: $1."
+  logger monitoring file $1: ERROR Unknow file.
+  exit 1
+fi
+
+newsum="`md5sum $1`"
+
+if egrep -q "$newsum" $sumfile; then
+  #echo "$1 matches"
+  logger monitoring file $1: matches
+else
+  #echo "$1 IS MODIFIED"
+  logger monitoring file $1: has been modified
+  logger sending mail
+
+  message_txt="$1 has been modified."
+  `echo ${message_txt} | /usr/bin/mail -s "$subject" "$recipients"` 
+
+  # replace old one by new one
+  logger monitoring file "$1": replacing old file [`cat $sumfile` by `echo $newsum`]
+  `echo "$newsum" > "$sumfile"`
+fi

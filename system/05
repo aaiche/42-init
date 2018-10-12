@@ -1,0 +1,6 @@
+#5) Donnez une commande qui détermine l’état du service SSH
+service ssh status
+#        or
+#        root@yourdebian:/home/aa# systemctl status ssh
+#        or
+#        root@yourdebian:/home/aa# /etc/init.d/ssh status

@@ -1,0 +1,22 @@
+#!/bin/bash
+# 
+# 
+#
+#set -x
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 directory" >&2
+  exit 1
+fi
+if ! [ -e "$1" ]; then
+  echo "$1 not found" >&2
+  exit 1
+fi
+if ! [ -d "$1" ]; then
+  echo "$1 not a directory" >&2
+  exit 1
+fi
+
+#find $1 -type f -exec ls -s {} \; | sort -n -r
+#root@mydebian:/home/aa/scripts# ls -l -S -R /var/cache | egrep -v total | sort -k 5 -n | awk '{print $5, $9}'
+
+du $1 | sort -n -r

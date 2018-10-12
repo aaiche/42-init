@@ -1,0 +1,18 @@
+#11) Trouvez grâce au résultat de la commande précédente le nom et l’IP du matériel
+#qui fait le lien entre vous (réseau local) et l’extérieur
+ 
+#gateway ou nat is to be or not be --> cf. reseau local, est ce que que ce qui n est pas dans mon reseau local peut
+#considere comme l exterieur
+
+#traceroute
+#2  nat-1 (10.60.1.11)  0.216 ms  0.203 ms  0.166 ms
+
+#reverse lookup
+#e1r5p23% dig -x 10.60.1.11 +short
+#nat-1.42.fr.
+
+
+#reponse qu ils veulent. Serveur NAT
+hostname : nat-1.42.fr.
+      ip : 10.60.1.11
+

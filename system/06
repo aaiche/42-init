@@ -1,0 +1,4 @@
+#6) Donnez une commande pour redémarrer le service SSH
+service ssh restart
+#logs are here:
+#        root@yourdebian:/home/aa# tail -f /var/log/auth.log

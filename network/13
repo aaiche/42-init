@@ -1,0 +1,6 @@
+#13) Determinez le type du serveur ==> dhcp server
+dig -x 10.51.1.253 +short
+	#dhcp.42.fr.
+
+
+#reponse : sercver dhcp

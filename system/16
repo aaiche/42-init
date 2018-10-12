@@ -1,0 +1,4 @@
+#16. Trouvez un service qui permet de lancer des tâches à horaires régulières
+# service: cron
+ps -aef | egrep -i cron
+#        crontab -e

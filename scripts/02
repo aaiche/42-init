@@ -1,0 +1,28 @@
+#!/bin/bash
+# 
+# 
+#
+# apt-get update will update apt's database, the list of available packages (and version's date and number). 
+# Where apt-get upgrade will upgrade all packages installed in your system (... if date and/or version differ).
+
+logger 02.sh: starting apt-get update.
+apt-get update 
+logger 02.sh: starting apt-get upgrade.
+apt-get -y upgrade
+logger 02.sh: end.
+
+# crontab -e ==>  0  0  4  * * 6 /bin/sh /home/aa/blah2.sh > /var/log/update_script.log 2>&1 
+#0 4 * * 6 /bin/sh /home/aa/scripts/02.sh >> /var/log/update_script.log 2>&1
+
+
+
+#si pas de crontab
+#logger 02.sh: starting apt-get update. 
+#apt-get update >> /var/log/update_script.log 2>&1
+#logger 02.sh: starting apt-get upgrade.
+#apt-get -yupgrade >> /var/log/update_script.log 2>&1
+#logger 02.sh: end.
+
+
+#si une seule commande
+#apt-get update >> /var/log/update_script.log && apt-get -y upgrade >> /var/log/update_script.log

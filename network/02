@@ -1,0 +1,25 @@
+#2) Identifiez et affichez les caractéristiques de l’interface Ethernet
+#	system_profiler SPNetworkDataType
+#	e1r9p20% /System/Library/CoreServices/Applications/Network\ Utility.app/Contents/MacOS/Network\ Utility  &
+#	ifconfig | grep "inet " | grep -v 127.0.0.1
+#	ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' 
+#	ipconfig getifaddr en0
+#	e1r7p22% ipconfig getifaddr en0
+#	10.11.7.22
+
+
+#	bonne reponse
+#	e1r9p20% networksetup -getinfo "ethernet"
+#	DHCP Configuration
+#	IP address: 10.11.9.20
+#	Subnet mask: 255.255.0.0
+#	Router: 10.11.254.254
+#	Client ID:
+#	IPv6: Automatic
+#	IPv6 IP address: none
+#	IPv6 Router: none
+#	Ethernet Address: 10:dd:b1:ac:33:65
+	
+# ce ne sont pas vraiment des caracteristiques mais c est ce qu ils veulent !!
+ifconfig en0
+

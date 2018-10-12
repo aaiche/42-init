@@ -1,0 +1,6 @@
+#TBD 
+#10) Quelle commande permet de lister les tables de partitions des périphériques ?
+        #root@yourdebian:~#  parted /dev/sda print
+        #root@yourdebian:~# cat /etc/fstab
+
+fdisk -l

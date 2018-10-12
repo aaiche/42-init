@@ -1,0 +1,5 @@
+#12) Déterminez la taille exacte de chaque dossier de /var
+du --max-depth=1 /var | sort -hr
+
+# ou so l on veut les sous repertoires ...
+# du -h /var

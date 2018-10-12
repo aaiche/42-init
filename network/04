@@ -1,0 +1,6 @@
+#4) Identifiez la gateway par défaut dans la table de routage
+
+netstat -rn | awk '/default/ {if ( index($6, "en") > 0 ){print $2} }'
+
+#10.11.254.254
+

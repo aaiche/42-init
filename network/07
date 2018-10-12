@@ -1,0 +1,7 @@
+#7) Interrogez un serveur DNS externe sur le nom de domaine slash16.org (ex : google 8.8.8.8)
+
+# permet d eviter les caches et d avoir tjrs la mem reponse
+#dig @8.8.8.8 slash16.org. +trace
+
+nslookup slash16.org 8.8.8.8
+

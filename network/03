@@ -1,0 +1,8 @@
+#3) Identifiez l’adresse MAC de la carte Wi-Fi
+
+networksetup -getmacaddress en1
+
+
+#Ethernet Address: ec:35:86:42:3d:ca (Device: en1)
+#e1r7p22% ifconfig en1 | grep ether | awk '{print $2}'
+

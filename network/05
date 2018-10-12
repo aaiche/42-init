@@ -1,0 +1,15 @@
+#5) Identifiez l’IP du serveur DNS qui répond sur le domaine suivant
+
+# la question n est pas claire : est ce qu ils veulent le DNS de 42 ou bien celui de slash16.org !!!
+
+#dig +nssearch slash16.org
+
+# celui de slash16.org -- ici il faut voir la difference 
+#dig +short +answer NS slash16.org.
+
+
+# celui de 42
+#dig slash16.org  | egrep -i SERVER
+
+# en regardaant la correction c est cette commande qu ils veulent !!!!! aucun
+nslookup slash16.org

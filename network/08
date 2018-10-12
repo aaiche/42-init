@@ -1,0 +1,9 @@
+#8) Trouver chez quel hébergeur est le site de Slash16
+# www.whoishostingthis.com/?q=slash16.org
+
+#dig +x 13.32.210.137 
+#puis regarder le hostname
+
+#reponse
+amazon
+
